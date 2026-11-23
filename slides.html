@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valorant & VCT 電競入門教學簡報</title>
+<style>
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:#0f1923; color:#ece8e1; font-family:system-ui,-apple-system,"Segoe UI",sans-serif; height:100vh; overflow:hidden; display:flex; flex-direction:column; }
+  .progress { height:5px; background:#1f2e3d; width:100%; }
+  .progress-bar { height:100%; background:#ff4655; width:0%; transition:width 0.3s ease; }
+  main { flex:1; display:flex; align-items:center; justify-content:center; padding:2rem; position:relative; }
+  .slide { display:none; max-width:920px; width:100%; animation:fadeIn 0.35s ease; }
+  .slide.active { display:block; }
+  @keyframes fadeIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+  .tag { display:inline-block; background:#ff4655; color:#fff; padding:0.25rem 0.75rem; font-size:0.85rem; font-weight:700; letter-spacing:1px; border-radius:4px; margin-bottom:1rem; }
+  h1 { font-size:3rem; line-height:1.2; margin-bottom:1rem; }
+  h2 { font-size:2.1rem; color:#ff4655; margin-bottom:1.2rem; border-bottom:2px solid #263747; padding-bottom:0.5rem; }
+  p { font-size:1.2rem; line-height:1.7; color:#d0ccc5; margin-bottom:1rem; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1rem; margin-top:1.2rem; }
+  .box { background:#1a2634; border:1px solid #2b3d4f; border-radius:10px; padding:1.2rem; }
+  .box h3 { color:#fff; margin-bottom:0.5rem; font-size:1.2rem; }
+  .box p { font-size:1rem; margin:0; }
+  ul { list-style:none; margin-top:0.8rem; }
+  ul li { font-size:1.15rem; padding:0.6rem 0; border-bottom:1px solid #1e2d3b; }
+  ul li strong { color:#ff4655; }
+  footer { display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; background:#141f2b; border-top:1px solid #243444; }
+  button { background:#ff4655; color:#fff; border:none; padding:0.6rem 1.4rem; font-size:1rem; font-weight:600; border-radius:6px; cursor:pointer; }
+  button:disabled { background:#3a4856; cursor:not-allowed; }
+  .counter { font-size:0.95rem; color:#9aa8b6; }
+  .wiki-link { color:#ff4655; text-decoration:none; font-size:0.95rem; }
+</style>
+</head>
+<body>
+<div class="progress"><div class="progress-bar" id="bar"></div></div>
+<main>
+  <section class="slide active">
+    <span class="tag">LLM WIKI 教學簡報</span>
+    <h1>第一次看《特戰英豪》電競就上手</h1>
+    <p>從零認識 5v5 戰術射擊規則、VCT 全球聯賽體系，到世界冠軍 EDG 與明星選手康康。</p>
+    <p style="margin-top:2rem; font-size:1rem; color:#8fa0b0;">知識來源：Valorant VCT Wiki ｜ 使用鍵盤 ← → 或下方按鈕換頁</p>
+  </section>
+
+  <section class="slide">
+    <span class="tag">01 遊戲基礎</span>
+    <h2>《特戰英豪》在玩什麼？</h2>
+    <p>結合「精準槍法」與「角色超能力」的 5v5 攻守射擊遊戲，先拿 <strong>13 分</strong>的隊伍獲勝。</p>
+    <div class="grid">
+      <div class="box"><h3>攻擊方</h3><p>帶「輻能核心」進據點安裝並引爆，或擊敗全部 5 名防守方。</p></div>
+      <div class="box"><h3>防守方</h3><p>守住據點阻止安裝、拆除核心，或拖到倒數時間歸零。</p></div>
+      <div class="box"><h3>經濟博弈</h3><p>每回合花錢買槍與技能，沒錢時必須策略性「存錢（Eco）」。</p></div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <span class="tag">02 團隊分工</span>
+    <h2>四大特務定位</h2>
+    <p>職業比賽不是各自亂衝，5 名選手必須靠四種角色定位互相配合：</p>
+    <div class="grid">
+      <div class="box"><h3>決鬥者 Duelist</h3><p>進攻箭頭，負責破點拿首殺、拉開戰場空間。</p></div>
+      <div class="box"><h3>先鋒 Initiator</h3><p>偵查敵人位置、用閃光與控制技能掩護隊友。</p></div>
+      <div class="box"><h3>控場者 Controller</h3><p>施放煙霧封鎖敵人視野，主導地圖控制權。</p></div>
+      <div class="box"><h3>守衛 Sentinel</h3><p>架設陷阱守點與防繞後，穩固隊伍防線。</p></div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <span class="tag">03 觀賽術語</span>
+    <h2>聽懂賽評在喊什麼</h2>
+    <ul>
+      <li><strong>Eco（經濟局）：</strong>這回合省錢只拿手槍，為了下回合能買齊步槍。</li>
+      <li><strong>Thrifty（以小博大）：</strong>裝備比對手爛很多，卻靠戰術與槍法硬是贏下回合。</li>
+      <li><strong>Clutch（殘局逆轉）：</strong>全隊只剩 1 個人，面對 1v2、1v3 劣勢奇蹟翻盤。</li>
+      <li><strong>ACE（五殺）：</strong>一個人單回合清光對面全部 5 名選手。</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <span class="tag">04 賽事架構</span>
+    <h2>VCT 全球職業聯賽體系</h2>
+    <p>官方將全球頂尖戰隊劃分為四大國際賽區，透過整年賽季爭奪世界冠軍：</p>
+    <div class="grid">
+      <div class="box"><h3>四大賽區</h3><p>CN（中國）、Americas（美洲）、EMEA（歐非中東）、Pacific（太平洋）。</p></div>
+      <div class="box"><h3>大師賽 Masters</h3><p>年中兩場大型跨區國際賽，各賽區前段班強強對話。</p></div>
+      <div class="box"><h3>冠軍賽 Champions</h3><p>年度最高殿堂，全球最強 16 隊角逐世界冠軍。</p></div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <span class="tag">05 代表戰隊</span>
+    <h2>EDward Gaming（EDG）與世界冠軍</h2>
+    <p>來自 VCT CN 賽區的 <strong>EDG</strong>，在 2024 首爾全球冠軍賽總決賽以 3:2 力克歐洲強權 Team Heretics，奪下 CN 賽區隊史首座世界冠軍獎盃。</p>
+    <div class="box" style="margin-top:1.5rem;">
+      <h3>為什麼這場比賽很經典？</h3>
+      <p>EDG 展現極具侵略性的快節奏打法與強大心理素質，打破歐美與太平洋賽區的長期統治，也讓 VCT CN 正式站上世界之巔。</p>
+    </div>
+  </section>
+
+  <section class="slide">
+    <span class="tag">06 焦點選手</span>
+    <h2>明星決鬥者：ZmjjKK（康康）</h2>
+    <ul>
+      <li><strong>隊內定位：</strong>EDG 核心決鬥者與主力狙擊手（擅長間諜狙擊槍）。</li>
+      <li><strong>代表榮耀：</strong>2024 全球冠軍賽總決賽 FMVP，創下總決賽單場最高擊殺紀錄。</li>
+      <li><strong>賽場風格：</strong>極具爆發力與舞台感染力，擅長在關鍵殘局接管比賽。</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <span class="tag">07 結語</span>
+    <h2>準備好看你的第一場 VCT 比賽！</h2>
+    <p>下次打開轉播時，只要抓住三個重點：<strong>看雙方經濟差距</strong>、<strong>看決鬥者怎麼進點</strong>、<strong>看殘局誰能 Clutch</strong>，就能立刻享受戰術射擊電競的魅力。</p>
+    <p style="margin-top:1.5rem;"><a class="wiki-link" href="index.html">→ 前往完整 Valorant VCT Wiki 探索更多資料</a></p>
+  </section>
+</main>
+<footer>
+  <a class="wiki-link" href="index.html">Valorant VCT Wiki</a>
+  <div>
+    <button id="prev">上一頁</button>
+    <span class="counter" id="counter" style="margin:0 1rem;">1 / 8</span>
+    <button id="next">下一頁</button>
+  </div>
+</footer>
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const bar = document.getElementById('bar');
+  const counter = document.getElementById('counter');
+  const prevBtn = document.getElementById('prev');
+  const nextBtn = document.getElementById('next');
+  let current = 0;
+
+  function render() {
+    slides.forEach((s, i) => s.classList.toggle('active', i === current));
+    counter.textContent = (current + 1) + ' / ' + slides.length;
+    bar.style.width = ((current + 1) / slides.length * 100) + '%';
+    prevBtn.disabled = current === 0;
+    nextBtn.disabled = current === slides.length - 1;
+  }
+
+  prevBtn.addEventListener('click', () => { if (current > 0) { current--; render(); } });
+  nextBtn.addEventListener('click', () => { if (current < slides.length - 1) { current++; render(); } });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === ' ') { if (current < slides.length - 1) { current++; render(); } }
+    if (e.key === 'ArrowLeft') { if (current > 0) { current--; render(); } }
+  });
+
+  render();
+</script>
+</body>
+</html>
